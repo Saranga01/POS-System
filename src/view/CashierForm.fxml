@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootCashierForm" prefHeight="780.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CashierFormController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="780.0" prefWidth="1280.0" style="-fx-background-color: skyblue;" stylesheets="@style/Style.css">
+         <children>
+            <ImageView fitHeight="780.0" fitWidth="692.0" layoutX="294.0" layoutY="141.0" opacity="0.06" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/ecommerce-1-510x380-1.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="29.0" layoutY="91.0" opacity="0.47" prefHeight="3.0" prefWidth="1242.0" style="-fx-background-color: ffffff;" />
+            <Text fill="SNOW" layoutX="26.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quick Sale Store" wrappingWidth="445.6708984375">
+               <font>
+                  <Font name="System Bold" size="47.0" />
+               </font>
+            </Text>
+            <Separator layoutX="34.0" layoutY="723.0" opacity="0.13" prefHeight="3.0" prefWidth="1067.0" style="-fx-background-color: black;" />
+            <JFXTabPane layoutY="115.0" prefHeight="590.0" prefWidth="1280.0">
+               <tabs>
+                  <Tab text="   Place Order   ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1280.0">
+                           <children>
+                              <Text fill="WHITE" layoutX="53.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Place Order" wrappingWidth="152.99999237060547">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Text>
+                              <Separator layoutX="47.0" layoutY="65.0" opacity="0.12" prefHeight="3.0" prefWidth="1183.0" style="-fx-background-color: black;" />
+                              <AnchorPane layoutX="455.0" layoutY="80.0" onMouseClicked="#RootOrderDatailsOnClicked" opacity="0.75" prefHeight="462.0" prefWidth="803.0" style="-fx-background-color: #16a085#16a085; -fx-background-radius: 10;">
+                                 <children>
+                                    <JFXComboBox fx:id="CombSelectItemCode" focusColor="#3a529a" layoutX="27.0" layoutY="23.0" prefHeight="31.0" prefWidth="307.0" promptText=" Select Item Code" unFocusColor="BLACK" />
+                                    <Label fx:id="lblItemDescription" layoutX="31.0" layoutY="63.0" prefHeight="36.0" prefWidth="329.0" textFill="#fffdfd">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="31.0" layoutY="99.0" prefHeight="26.0" prefWidth="123.0" text="Qty On Hand  :" textFill="#0d3939">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="32.0" layoutY="123.0" prefHeight="26.0" prefWidth="98.0" text="Unit Price :" textFill="#0d3939">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="32.0" layoutY="146.0" prefHeight="26.0" prefWidth="91.0" text="Discount  :" textFill="#0d3939">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="32.0" layoutY="171.0" prefHeight="26.0" prefWidth="177.0" text="After Discount Price :" textFill="#0d3939">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblItemQtyOnHand" layoutX="156.0" layoutY="99.0" prefHeight="26.0" prefWidth="85.0" textFill="#0d3939">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblItemUnitPrice" layoutX="124.0" layoutY="123.0" prefHeight="26.0" prefWidth="118.0" textFill="#0d3939">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblItemDiscount" layoutX="121.0" layoutY="146.0" prefHeight="26.0" prefWidth="57.0" textFill="#0d3939">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblAfterDiscountPrice" layoutX="207.0" layoutY="171.0" prefHeight="26.0" prefWidth="112.0" textFill="#0d3939">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="34.0" layoutY="401.0" opacity="0.38" prefHeight="45.0" prefWidth="389.0" style="-fx-background-color: #12CBC4; -fx-background-radius: 10;" />
+                                    <TextField fx:id="txtReqAmount" layoutX="30.0" layoutY="204.0" opacity="0.74" prefHeight="33.0" prefWidth="153.0" promptText="Req Amount" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: white;">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button layoutX="190.0" layoutY="204.0" mnemonicParsing="false" onAction="#btnAddToCartOnAction" prefHeight="31.0" prefWidth="153.0" style="-fx-background-color: #056689; -fx-background-radius: 6;" text="Add to Cart" textFill="WHITE" />
+                                    <Label layoutX="53.0" layoutY="405.0" prefHeight="36.0" prefWidth="142.0" text="Total Price :" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="664.0" layoutY="315.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnRemoveOnAction" opacity="0.78" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: red; -fx-background-radius: 6;" text="Remove" textFill="WHITE" />
+                                    <Label fx:id="lblTotalPrice" layoutX="196.0" layoutY="405.0" prefHeight="36.0" prefWidth="205.0" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="569.0" layoutY="374.0" mnemonicParsing="false" onAction="#btnConfirmOrderOnAction" prefHeight="69.0" prefWidth="212.0" style="-fx-background-color: #004e93; -fx-background-radius: 6;" text="Cofirm Order" textFill="WHITE" />
+                                    <Button layoutX="544.0" layoutY="315.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnClearOrderOnAction1" opacity="0.78" prefHeight="30.0" prefWidth="112.0" style="-fx-background-color: red; -fx-background-radius: 6;" text="Clear Order" textFill="WHITE" />
+                                    <TableView fx:id="tblOrderDetails" layoutX="378.0" layoutY="21.0" opacity="0.78" prefHeight="288.0" prefWidth="400.0" style="-fx-background-color: skyblue;">
+                                      <columns>
+                                        <TableColumn fx:id="colmItemCodeOrder" prefWidth="128.0" style="-fx-background-color: #12CBC4;" text="Item Code" />
+                                        <TableColumn fx:id="colmItemReqAmountOrder" prefWidth="134.0" style="-fx-background-color: #12CBC4;" text="Req Qty" />
+                                          <TableColumn fx:id="colmItemPriceOrder" prefWidth="137.0" style="-fx-background-color: #12CBC4;" text="Price" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="23.0" layoutY="80.0" opacity="0.73" prefHeight="463.0" prefWidth="417.0" style="-fx-background-color: #16a085#16a085; -fx-background-radius: 10;">
+                                 <children>
+                                    <JFXComboBox fx:id="CombSelectCustomerID" focusColor="#3a529a" layoutX="28.0" layoutY="22.0" prefHeight="31.0" prefWidth="275.0" promptText=" Select Customer ID" unFocusColor="BLACK" />
+                                    <Label fx:id="lblCustomerName" layoutX="28.0" layoutY="172.0" prefHeight="36.0" prefWidth="373.0" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblCustomerAddress" layoutX="29.0" layoutY="206.0" prefHeight="21.0" prefWidth="338.0" textFill="#0d3939">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblCostomerCity" layoutX="30.0" layoutY="229.0" prefHeight="26.0" prefWidth="164.0" textFill="#0d3939">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblCustomerProvince" layoutX="31.0" layoutY="250.0" prefHeight="26.0" prefWidth="142.0" textFill="#0d3939">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblCustomerPostalCode" layoutX="30.0" layoutY="274.0" prefHeight="26.0" prefWidth="142.0" textFill="#0d3939">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fx:id="imgCustomer" fitHeight="104.0" fitWidth="111.0" layoutX="27.0" layoutY="71.0" opacity="0.71" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/pngfind.com-verified-png-5551803.png" />
+                                       </image></ImageView>
+                                    <Label fx:id="lblVerification" layoutX="132.0" layoutY="146.0" opacity="0.31" prefHeight="18.0" prefWidth="126.0" style="-fx-background-color: #12CBC4; -fx-background-radius: 15;" />
+                                    <Label fx:id="lblVerified" layoutX="141.0" layoutY="142.0" prefHeight="26.0" prefWidth="114.0" text="(verified Customer)" textFill="#02510b">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="OrderIdText" layoutX="30.0" layoutY="302.0" prefHeight="28.0" prefWidth="95.0" text="Order ID :" textFill="#f8f8f8">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblOrderId" layoutX="122.0" layoutY="303.0" prefHeight="28.0" prefWidth="132.0" textFill="#f8f8f8">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab onSelectionChanged="#ManageOrderChange" text="Manage Order">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1280.0">
+                           <children>
+                              <Text fill="SNOW" layoutX="31.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mange Order" wrappingWidth="176.6708984375">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Text>
+                              <Separator layoutX="31.0" layoutY="72.0" opacity="0.14" prefHeight="3.0" prefWidth="1205.0" style="-fx-background-color: black;" />
+                              <AnchorPane fx:id="rootManagement" layoutX="31.0" layoutY="88.0" prefHeight="456.0" prefWidth="1215.0">
+                                 <children>
+                                    <Label layoutX="24.0" layoutY="188.0" prefHeight="36.0" prefWidth="126.0" text="Order ID :" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblOrderIDManageOrder" layoutX="143.0" layoutY="189.0" prefHeight="21.0" prefWidth="126.0" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="24.0" layoutY="234.0" opacity="0.4" prefHeight="28.0" prefWidth="116.0" text="Customer ID :" textFill="#141414">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblCustIDandNameManageOrder" layoutX="139.0" layoutY="234.0" opacity="0.41" prefHeight="28.0" prefWidth="236.0" textFill="#1b1b1b">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="262.0" opacity="0.41" prefHeight="28.0" prefWidth="105.0" text="Order Date :" textFill="#1b1b1b">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="OrderDateManageOrder" layoutX="130.0" layoutY="262.0" opacity="0.41" prefHeight="28.0" prefWidth="105.0" textFill="#1b1b1b">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="290.0" opacity="0.41" prefHeight="28.0" prefWidth="105.0" text="Order Time :" textFill="#1b1b1b">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblTimeOrderMangeOrder" layoutX="130.0" layoutY="290.0" opacity="0.41" prefHeight="28.0" prefWidth="81.0" textFill="#1b1b1b">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="318.0" opacity="0.41" prefHeight="28.0" prefWidth="105.0" text="Total Cost :" textFill="#1b1b1b">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblTotalIDManageOrder" layoutX="118.0" layoutY="318.0" opacity="0.41" prefHeight="28.0" prefWidth="105.0" textFill="#1b1b1b">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="20.0" layoutY="15.0" opacity="0.33" prefHeight="153.0" prefWidth="207.0" style="-fx-background-color: #16a085#16a085; -fx-background-radius: 15;" />
+                                    <ImageView fitHeight="137.0" fitWidth="174.0" layoutX="53.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/kisspng-contract-computer-icons-sign-document-work-permit-5af1e218220735.2399484215258014961394.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TableView fx:id="tblOrderDetailsMangeOrder" layoutX="385.0" layoutY="15.0" opacity="0.41" prefHeight="403.0" prefWidth="513.0" style="-fx-background-color: #16a085#16a085;">
+                                      <columns>
+                                        <TableColumn fx:id="colmItemCodeMangeOrder" prefWidth="159.0" text="Item Code" />
+                                        <TableColumn fx:id="colmQtyOrderMange" prefWidth="173.0" text="Qty" />
+                                          <TableColumn fx:id="colmItemCostOrderMange" prefWidth="179.0" text="Item Cost" />
+                                      </columns>
+                                    </TableView>
+                                    <Separator layoutX="24.0" layoutY="224.0" opacity="0.14" prefHeight="3.0" prefWidth="333.0" style="-fx-background-color: black;" />
+                                    <Button layoutX="987.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnMoreOrdersOnAction" opacity="0.67" prefHeight="31.0" prefWidth="205.0" style="-fx-background-color: #056689; -fx-background-radius: 6;" text="More Orders" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="987.0" layoutY="75.0" mnemonicParsing="false" onAction="#btnUpdateOrderOnAction" opacity="0.68" prefHeight="31.0" prefWidth="205.0" style="-fx-background-color: #056689; -fx-background-radius: 6;" text="Update Order" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="987.0" layoutY="132.0" mnemonicParsing="false" onAction="#DeleteOrderOnAction" opacity="0.62" prefHeight="31.0" prefWidth="205.0" style="-fx-background-color: red; -fx-background-radius: 6;" text="Delete Order" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <JFXComboBox fx:id="CombSelectOrderIDMangeOrder" layoutX="943.0" layoutY="33.0" opacity="0.58" prefHeight="31.0" prefWidth="289.0" promptText="Select Order ID" unFocusColor="#726c6c" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab onSelectionChanged="#AddCustomerChange" text="   Add Customer   ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="663.0" layoutY="84.0" opacity="0.37" prefHeight="181.0" prefWidth="434.0" style="-fx-background-color: #16a085#16a085; -fx-background-radius: 10;" />
+                              <AnchorPane layoutX="163.0" layoutY="84.0" opacity="0.37" prefHeight="471.0" prefWidth="434.0" style="-fx-background-color: #16a085#16a085; -fx-background-radius: 10;" />
+                              <TextField fx:id="txtCustomerID" layoutX="192.0" layoutY="115.0" prefHeight="40.0" prefWidth="375.0" promptText=" Custormer ID" />
+                              <TextField fx:id="txtCustomerTitle" layoutX="192.0" layoutY="201.0" prefHeight="40.0" prefWidth="375.0" promptText=" Customer Title" />
+                              <TextField fx:id="txtCustomerCity" layoutX="191.0" layoutY="486.0" prefHeight="40.0" prefWidth="375.0" promptText=" Customer City" />
+                              <TextField fx:id="txtCustomerName" layoutX="193.0" layoutY="296.0" prefHeight="40.0" prefWidth="375.0" promptText=" Customer Name" />
+                              <TextField fx:id="txtCustomerAddress" layoutX="192.0" layoutY="392.0" prefHeight="40.0" prefWidth="375.0" promptText=" Customer Address" />
+                              <Button layoutX="925.0" layoutY="466.0" mnemonicParsing="false" onAction="#btnAddCustomer" prefHeight="31.0" prefWidth="220.0" style="-fx-background-color: #056689; -fx-background-radius: 6;" text="Add Customer" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="txtCustomerProvince" layoutX="692.0" layoutY="107.0" prefHeight="40.0" prefWidth="375.0" promptText=" Customer Province" />
+                              <TextField fx:id="txtCustomerPostalCode" layoutX="691.0" layoutY="193.0" prefHeight="40.0" prefWidth="375.0" promptText=" Customer Postal Code" />
+                              <Text fill="WHITE" layoutX="83.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Customer" wrappingWidth="445.6708984375">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Text>
+                              <Separator layoutX="77.0" layoutY="69.0" opacity="0.12" prefHeight="3.0" prefWidth="1090.0" style="-fx-background-color: black;" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="   Update &amp; Delete Customer   ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="688.0" layoutY="112.0" opacity="0.36" prefHeight="170.0" prefWidth="446.0" style="-fx-background-color: #16a085#16a085; -fx-background-radius: 10;" />
+                              <AnchorPane layoutX="192.0" layoutY="112.0" opacity="0.36" prefHeight="415.0" prefWidth="446.0" style="-fx-background-color: #16a085#16a085; -fx-background-radius: 10;" />
+                              <TextField fx:id="txtEnterCustID" layoutX="814.0" layoutY="38.0" prefHeight="35.0" prefWidth="375.0" promptText=" Enter Customer ID" />
+                              <Button layoutX="1104.0" layoutY="38.0" mnemonicParsing="false" onAction="#btnSearch" prefHeight="33.0" prefWidth="125.0" style="-fx-background-color: #056689; -fx-background-radius: 6;" text="Search" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="txtCustID" layoutX="227.0" layoutY="139.0" prefHeight="40.0" prefWidth="375.0" promptText=" Custormer ID" />
+                              <TextField fx:id="tctCustTitle" layoutX="228.0" layoutY="212.0" prefHeight="40.0" prefWidth="375.0" promptText=" Customer Title" />
+                              <TextField fx:id="txtCustAddress" layoutX="229.0" layoutY="373.0" prefHeight="40.0" prefWidth="375.0" promptText=" Customer Address" />
+                              <TextField fx:id="txtCustName" layoutX="230.0" layoutY="291.0" prefHeight="40.0" prefWidth="375.0" promptText=" Customer Name" />
+                              <TextField fx:id="txtCustCity" layoutX="231.0" layoutY="459.0" prefHeight="40.0" prefWidth="375.0" promptText=" Customer City" />
+                              <Button layoutX="979.0" layoutY="459.0" mnemonicParsing="false" onAction="#btnUpdate" prefHeight="31.0" prefWidth="170.0" style="-fx-background-color: #056689; -fx-background-radius: 6;" text="Update" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="791.0" layoutY="459.0" mnemonicParsing="false" onAction="#btnDelete" opacity="0.88" prefHeight="31.0" prefWidth="176.0" style="-fx-background-color: #ff2f2f; -fx-background-radius: 6;" text="Delete" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="txtCustProvince" layoutX="724.0" layoutY="138.0" prefHeight="40.0" prefWidth="375.0" promptText=" Customer Province" />
+                              <TextField fx:id="txtCustPostalCOde" layoutX="723.0" layoutY="212.0" prefHeight="40.0" prefWidth="375.0" promptText=" Customer Postal Code" />
+                              <Separator layoutX="42.0" layoutY="81.0" opacity="0.14" prefHeight="3.0" prefWidth="1186.0" style="-fx-background-color: black;" />
+                              <Text fill="SNOW" layoutX="43.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update &amp; Delete Customer" wrappingWidth="339.6708984375">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab onSelectionChanged="#ViewCustomerChange" text="   View Customers   ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tblViewCustomer" layoutX="21.0" layoutY="29.0" opacity="0.87" prefHeight="501.0" prefWidth="1240.0" style="-fx-background-color: skyblue;">
+                                <columns>
+                                  <TableColumn fx:id="colmCustId" prefWidth="126.0" text="Customer ID" />
+                                  <TableColumn fx:id="colmCustTitle" prefWidth="125.0" text=" Title" />
+                                    <TableColumn fx:id="colmCustName" prefWidth="224.0" text=" Name" />
+                                    <TableColumn fx:id="colmCustAddress" prefWidth="289.0" text=" Address" />
+                                    <TableColumn fx:id="colmCustCity" prefWidth="168.0" text="City" />
+                                    <TableColumn fx:id="colmCustProvince" prefWidth="158.0" text="Province" />
+                                    <TableColumn fx:id="colmCustPostalCode" prefWidth="148.0" text=" Postal Code" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab onSelectionChanged="#ViewItemChange" text="   View Items   ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tblViewItem" layoutX="21.0" layoutY="29.0" opacity="0.78" prefHeight="516.0" prefWidth="1236.0" style="-fx-background-color: skyblue;">
+                                <columns>
+                                  <TableColumn fx:id="colmItemCode" prefWidth="153.0" text="Item Code" />
+                                  <TableColumn fx:id="colomDescription" prefWidth="461.0" text="Description" />
+                                    <TableColumn fx:id="colmPackSize" prefWidth="177.0" text="Pack Size" />
+                                    <TableColumn fx:id="colmUnitPrice" prefWidth="157.0" text="Unit Price" />
+                                    <TableColumn fx:id="colmQtyOnHand" prefWidth="160.0" text="Qty On Hand" />
+                                    <TableColumn fx:id="colmDiscRate" prefWidth="126.0" text="Disc Rate" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+            <Button layoutX="1113.0" layoutY="707.0" mnemonicParsing="false" onAction="#btnLogOut" prefHeight="31.0" prefWidth="142.0" style="-fx-background-color: #0c9d1d; -fx-background-radius: 6;" text="Log out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblWelcomeName" layoutX="30.0" layoutY="749.0" opacity="0.63" prefHeight="25.0" prefWidth="1058.0" textFill="#030303">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="1131.0" layoutY="65.0" prefHeight="25.0" prefWidth="105.0" text="2021/10/11" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="1128.0" layoutY="28.0" prefHeight="36.0" prefWidth="126.0" text="02:25:58" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="1045.0" layoutY="14.0" opacity="0.64" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/kisspng-user-computer-icons-login-google-account-5aff29c0e40470.621294081526671808934.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <Lighting diffuseConstant="1.78" specularConstant="0.62" specularExponent="25.85" surfaceScale="1.62">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+               </light>
+            </Lighting>
+         </effect>
+      </AnchorPane>
+      <Label layoutX="1126.0" layoutY="8.0" prefHeight="25.0" prefWidth="153.0" text="(Cashier)" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="9.0" fitWidth="9.0" layoutX="1206.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/PikPng.com_home-icon-png_1819748.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

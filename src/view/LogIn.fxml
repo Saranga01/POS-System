@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootLogInPage" prefHeight="780.0" prefWidth="1280.0" style="-fx-background-color: #81ecec;" stylesheets="@style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LogInFormController">
+    <children>
+        <ImageView fitHeight="780.0" fitWidth="692.0" layoutX="552.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image/ecommerce-1-510x380-1.png" />
+            </image>
+        </ImageView>
+        <Label opacity="0.46" prefHeight="27.0" prefWidth="1280.0" style="-fx-background-color: blue;">
+            <effect>
+                <Lighting specularConstant="0.69" specularExponent="12.68" surfaceScale="2.48">
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                    <light>
+                        <Light.Distant />
+                    </light>
+                </Lighting>
+            </effect>
+        </Label>
+        <Label layoutX="85.0" layoutY="216.0" prefHeight="403.0" prefWidth="391.0" style="-fx-background-color: #1289A7; -fx-background-radius: 10;" />
+        <Text fill="WHITE" layoutX="243.0" layoutY="258.0" opacity="0.93" strokeType="OUTSIDE" strokeWidth="0.0" text="Log in" wrappingWidth="75.6708984375">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Text>
+        <TextField fx:id="txtUserName" layoutX="125.0" layoutY="309.0" prefHeight="31.0" prefWidth="316.0" promptText="User Name" />
+        <Button layoutX="121.0" layoutY="444.0" mnemonicParsing="false" onAction="#btnLogInOnAction" prefHeight="31.0" prefWidth="316.0" style="-fx-background-color: #00b894; -fx-background-radius: 6;" text="Log in" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+        <Text fill="WHITE" layoutX="144.0" layoutY="526.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you are not yet registered here,click on the link below" wrappingWidth="275.00000381469727" />
+        <Label layoutY="753.0" opacity="0.5" prefHeight="27.0" prefWidth="1280.0" style="-fx-background-color: blue;">
+            <effect>
+                <Lighting specularConstant="0.69" specularExponent="12.68" surfaceScale="2.48">
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                    <light>
+                        <Light.Distant />
+                    </light>
+                </Lighting>
+            </effect>
+        </Label>
+        <Separator layoutX="49.0" layoutY="131.0" opacity="0.28" prefHeight="0.0" prefWidth="1193.0" style="-fx-background-color: blue;" />
+        <Text fill="#fffafa" layoutX="49.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quick Sale Store" wrappingWidth="403.6708984375">
+            <font>
+                <Font name="System Bold" size="49.0" />
+            </font>
+        </Text>
+      <Label fx:id="lblLoginNameError" layoutX="125.0" layoutY="340.0" prefHeight="21.0" prefWidth="316.0" textFill="#e80b0b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblLoginPasswordError" layoutX="123.0" layoutY="412.0" prefHeight="21.0" prefWidth="316.0" textFill="#e80b0b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtPassword" layoutX="125.0" layoutY="375.0" prefHeight="31.0" prefWidth="316.0" promptText="User Password" />
+    </children>
+    <effect>
+        <Lighting diffuseConstant="1.78" specularConstant="0.62" specularExponent="25.85" surfaceScale="1.62">
+            <bumpInput>
+                <Shadow />
+            </bumpInput>
+            <light>
+                <Light.Distant />
+            </light>
+        </Lighting>
+    </effect>
+</AnchorPane>
